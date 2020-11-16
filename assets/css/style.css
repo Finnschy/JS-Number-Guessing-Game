@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: "SF Mono";
+    src: url(../fonts/SFMono-Regular.otf)
+}
 :root {
     --button-color: #00ebc7;
     --main-color: #194988;
@@ -7,7 +10,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "SF Mono", sans-serif;
     color: #fff;
     box-sizing: border-box;
 }
@@ -29,24 +32,11 @@ main {
     box-shadow: 10px 10px 30px #153e74, -10px -10px 30px #1d549c;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    letter-spacing: .2rem;
-    color: var(--button-color);
 }
 
-h2 {
-    text-align: center;
-    margin: 2rem 0;
-}
 
-p {
-    text-align: center;
-    letter-spacing: .2rem;
-    color: #fff;
-    margin: 1rem 0 0 0;
-    padding: 1% 0;
-}
 
 #roundsBox {
     display: flex;
@@ -65,7 +55,7 @@ form {
     padding: 1% 0;
 }
 
-#counterPoints {
+#mainGame {
     display: flex;
     justify-content: space-around;
     width: 80%;
@@ -76,7 +66,14 @@ form {
     padding: 3% 0;
 }
 
-#counterPoints div h1:nth-of-type(1) {
+#resultBox {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+#mainGame div h1:nth-of-type(1) {
     margin: 0 0 1rem 0;
 }
 
@@ -89,12 +86,9 @@ form {
 }
 
 button {
-    padding: 1.5% 4%;
     border: none;
-    border-radius: .5rem;
     background: var(--button-color);
     color: var(--main-color);
-    align-self: center;
     transition: background .5s ease;
 }
 
@@ -210,10 +204,10 @@ button:hover {
         margin: 0 0 1rem 0;
     }
 
-    #counterPoints {
+    #mainGame {
         padding: 1rem 1rem;
     }
-    #counterPoints div h1:nth-of-type(1) {
+    #mainGame div h1:nth-of-type(1) {
         margin: 0 0 0 0;
     }
     #icons img {
@@ -230,7 +224,7 @@ button:hover {
         padding: 4%;
         margin: 0 0 1rem 0;
     }
-    #counterPoints {
+    #mainGame {
         border-radius: 1rem;
     }
 

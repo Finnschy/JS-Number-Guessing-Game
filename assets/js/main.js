@@ -30,12 +30,15 @@ function checkRounds() {
 checkRounds()
 
 
-//--- Funktion um den Value aus den Radio Buttons zu kriegen
-    // for (var i = 0, length = rounds.length; i < length; i++) {
-    //     rounds[i].onclick = function() {
-    //         console.log(this.value);
-    //     }
-    //   }
+//--- Funktion um den Value aus den Radio Buttons zu kriegen -- funktioniert so nicht
+// function checkRounds() {
+//     for (var i = 0, length = rounds.length; i < length; i++) {
+//         rounds[i].onclick = function() {
+//             return this.value
+//         }
+//       }
+// }
+// checkRounds()
 
 
 //--- Funktion für den Zufallsgenerator
@@ -54,12 +57,11 @@ startGuessing.addEventListener("click", () => {
     clickCount++
     let radioRounds = checkRounds() 
     roundsCounter.innerHTML = `${clickCount}/${radioRounds}` 
-    // console.log(radioRounds);
     let guessingInput = document.getElementById("guessingInput")
 
+
     if (clickCount === radioRounds) {
-        console.log(radioRounds);
-        result.innerHTML += `${clickCount}. You didn't guessed right. LOSER.`
+        result.innerHTML += `${clickCount}. You didn't guessed right. You lose! <br>`
     } else if (guessingInput.value > compNumber) {
         result.innerHTML += `${clickCount}. You need to guess lower than ${guessingInput.value}. Try again. <br>`
     } else if (guessingInput.value < compNumber) {

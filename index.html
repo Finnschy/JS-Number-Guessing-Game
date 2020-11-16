@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    
+
     <main>
         <h1>Number Guessing Game</h1>
+
         <section>
+
             <article id="roundsBox">
-                <h2>How many rounds do you want to play?</h2>
+
+                <h2>How many guesses do you think you'll need?</h2>
+
                 <form action="" id="roundChoice">
                     <div>
                         <input type="radio" name="rounds" id="four" value="4" checked>
                         <label for="four">04</label>
-                        
+
                         <input type="radio" name="rounds" id="five" value="5">
                         <label for="five">05</label>
-                        
+
                         <input type="radio" name="rounds" id="six" value="6">
                         <label for="six">06</label>
-                        
+
                         <input type="radio" name="rounds" id="custom">
                         <label for="custom">Custom</label>
                     </div>
-                    <div id="customRounds" >
+                    <div id="customRounds">
                         <form action="">
                             <input type="number" name="custom" id="customInput" placeholder="12">
                         </form>
@@ -36,7 +42,7 @@
 
             </article>
 
-            <article id="counterPoints">
+            <article id="mainGame">
 
                 <div>
                     <h1>ROUNDS</h1>
@@ -49,12 +55,14 @@
                         <button id="start">Guess</button>
                     </form>
                 </div>
-            </article>
-        </section>
 
-        
-        <p id="result"></p>
-        
+            </article>
+
+            <div id="resultBox">
+                <p id="result"></p>
+            </div>
+            
+        </section>
 
 
     </main>
@@ -64,4 +72,5 @@
     </section>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
