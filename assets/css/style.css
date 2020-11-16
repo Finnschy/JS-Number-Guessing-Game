@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 :root {
     --button-color: #00ebc7;
     --main-color: #194988;
@@ -7,7 +7,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Xanh Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     box-sizing: border-box;
 }
@@ -80,25 +80,12 @@ form {
     margin: 0 0 1rem 0;
 }
 
-#icons {
-    display: flex;
-    justify-content: center;
+#guessingInput, #customInput {
+    color: black;
 }
 
-/* border-radius ist hier wichtig, weil der JS win/lose/draw Effekt sonst die Ecken sichtbar macht, wieso auch immer :( */
-
-#icons img {
-    max-width: 7rem;
-    border-radius: .8rem;
-    transition: box-shadow .5s ease;
-    margin: 0 2rem;
-    cursor: pointer;
-}
-
-#restartBox {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0 0 0;
+.notDisplayed {
+    display: none;
 }
 
 button {

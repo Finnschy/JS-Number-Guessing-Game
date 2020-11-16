@@ -15,18 +15,21 @@
                 <h2>How many rounds do you want to play?</h2>
                 <form action="" id="roundChoice">
                     <div>
-                        <input type="radio" name="rounds" id="five" value="5" checked>
+                        <input type="radio" name="rounds" id="four" value="4" checked>
+                        <label for="four">04</label>
+                        
+                        <input type="radio" name="rounds" id="five" value="5">
                         <label for="five">05</label>
-                        <input type="radio" name="rounds" id="ten" value="10">
-                        <label for="ten">10</label>
-                        <input type="radio" name="rounds" id="fifteen" value="15">
-                        <label for="fifteen">15</label>
-                        <input type="radio" name="rounds" id="twenty" value="20">
-                        <label for="twenty">Custom</label>
+                        
+                        <input type="radio" name="rounds" id="six" value="6">
+                        <label for="six">06</label>
+                        
+                        <input type="radio" name="rounds" id="custom">
+                        <label for="custom">Custom</label>
                     </div>
-                    <div id="customRounds">
+                    <div id="customRounds" >
                         <form action="">
-                            <input type="number" name="custom" id="custom" placeholder="20">
+                            <input type="number" name="custom" id="customInput" placeholder="12">
                         </form>
                     </div>
                 </form>
@@ -37,33 +40,28 @@
 
                 <div>
                     <h1>ROUNDS</h1>
-                    <h1 id="roundsCounter">1/10</h1>
+                    <h1 id="roundsCounter"></h1>
                 </div>
 
                 <div>
                     <form action="">
-                        <input type="number" placeholder="20">
-                        <button>Guess</button>
+                        <input type="number" placeholder="20" id="guessingInput">
+                        <button id="start">Guess</button>
                     </form>
                 </div>
-
-    
-                    <p id="result">Nope</p>
-                
-
             </article>
         </section>
 
         
+        <p id="result"></p>
+        
 
-        <section id="restartBox">
-            <button id="restart">restart</button>
-
-        </section>
 
     </main>
 
-
+    <section id="restartBox">
+        <button id="restart">restart</button>
+    </section>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
