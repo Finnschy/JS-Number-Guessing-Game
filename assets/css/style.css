@@ -3,15 +3,15 @@
     src: url(../fonts/SFMono-Regular.otf)
 }
 :root {
-    --button-color: #00ebc7;
-    --main-color: #194988;
+    --font-color: #393090;
+    --main-color: #89a2a9;
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: "SF Mono", sans-serif;
-    color: #fff;
+    color: var(--font-color);
     box-sizing: border-box;
 }
 
@@ -28,15 +28,22 @@ main {
     min-width: 80%;
     padding: 2%;
     align-self: center;
-    background: linear-gradient(145deg, #17427a, #1b4e92);
-    box-shadow: 10px 10px 30px #153e74, -10px -10px 30px #1d549c;
+    background: linear-gradient(145deg, #7b9298, #93adb5);
+    box-shadow:  5px 5px 15px #748a90, 
+                 -5px -5px 15px #9ebac2;
 }
 
 h1, h2 {
     text-align: center;
 }
 
+h1 {
+    font-size: 1.5rem;
+}
 
+h2 {
+    margin: 0 0 2rem 0;
+}
 
 #roundsBox {
     display: flex;
@@ -51,19 +58,16 @@ form {
     border-radius: 1rem;
 }
 
-#roundChoice div {
-    padding: 1% 0;
+#mainGame {
+    background: linear-gradient(145deg, #7b9298, #93adb5);
+    box-shadow: inset 5px 5px 15px #748a90, 
+                inset -5px -5px 15px #9ebac2;
+    border-radius: 1.5rem;
+    padding: 3% 0;
 }
 
-#mainGame {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin: 0 auto;
-    background: linear-gradient(145deg, #17427a, #1b4e92);
-    box-shadow: inset 5px 5px 15px #153e74, inset -5px -5px 15px #1d549c;
-    border-radius: 2rem;
-    padding: 3% 0;
+input {
+    margin: 1.5rem 0 1rem 0;
 }
 
 #resultBox {
@@ -73,22 +77,25 @@ form {
     margin: 2rem auto;
 }
 
-#mainGame div h1:nth-of-type(1) {
-    margin: 0 0 1rem 0;
+#restartBox {
+    display: flex;
+    justify-content: center;
 }
 
-#guessingInput, #customInput {
-    color: black;
+#restartBox #restart {
+    margin: 2rem 0 0 0;
 }
 
-.notDisplayed {
+/* .notDisplayed {
     display: none;
-}
+} */
 
 button {
     border: none;
-    background: var(--button-color);
     color: var(--main-color);
+    background: var(--font-color);
+    padding: 1% 2%;
+    border-radius: .5rem;
     transition: background .5s ease;
 }
 

@@ -24,6 +24,7 @@ function checkRounds() {
         radioRounds = 6
     } else if (custom.checked) {
         radioRounds = customInput
+        document.getElementById("customInput").classList.remove("notDisplayed")
     }
     return radioRounds
 }
@@ -34,7 +35,9 @@ checkRounds()
 // function checkRounds() {
 //     for (var i = 0, length = rounds.length; i < length; i++) {
 //         rounds[i].onclick = function() {
-//             return this.value
+//             // return this.value
+//             console.log(this.value);
+
 //         }
 //       }
 // }

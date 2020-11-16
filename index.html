@@ -35,7 +35,7 @@
                     </div>
                     <div id="customRounds">
                         <form action="">
-                            <input type="number" name="custom" id="customInput" placeholder="12">
+                            <input type="number" name="custom" id="customInput" class="notDisplayed" placeholder="12">
                         </form>
                     </div>
                 </form>
@@ -55,21 +55,20 @@
                         <button id="start">Guess</button>
                     </form>
                 </div>
-
+                <div id="resultBox">
+                    <p id="result"></p>
+                </div>
             </article>
-
-            <div id="resultBox">
-                <p id="result"></p>
-            </div>
+            
             
         </section>
 
-
+        <section id="restartBox">
+            <button id="restart">restart</button>
+        </section>
     </main>
 
-    <section id="restartBox">
-        <button id="restart">restart</button>
-    </section>
+
     <script src="assets/js/main.js"></script>
 </body>
 
