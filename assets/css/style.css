@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+:root {
+    --button-color: #00ebc7;
+    --main-color: #194988;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Xanh Mono', monospace;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    border-radius: 2rem;
+    min-width: 80%;
+    padding: 2%;
+    align-self: center;
+    background: linear-gradient(145deg, #17427a, #1b4e92);
+    box-shadow: 10px 10px 30px #153e74, -10px -10px 30px #1d549c;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: .2rem;
+    color: var(--button-color);
+}
+
+h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+p {
+    text-align: center;
+    letter-spacing: .2rem;
+    color: #fff;
+    margin: 1rem 0 0 0;
+    padding: 1% 0;
+}
+
+#roundsBox {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#roundChoice div {
+    padding: 1% 0;
+}
+
+#counterPoints {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #17427a, #1b4e92);
+    box-shadow: inset 5px 5px 15px #153e74, inset -5px -5px 15px #1d549c;
+    border-radius: 2rem;
+    padding: 3% 0;
+}
+
+#counterPoints div h1:nth-of-type(1) {
+    margin: 0 0 1rem 0;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+}
+
+/* border-radius ist hier wichtig, weil der JS win/lose/draw Effekt sonst die Ecken sichtbar macht, wieso auch immer :( */
+
+#icons img {
+    max-width: 7rem;
+    border-radius: .8rem;
+    transition: box-shadow .5s ease;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+#restartBox {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
+}
+
+button {
+    padding: 1.5% 4%;
+    border: none;
+    border-radius: .5rem;
+    background: var(--button-color);
+    color: var(--main-color);
+    align-self: center;
+    transition: background .5s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background: #fff;
+}
+
+/* Custom Radio Buttons */
+
+[type="radio"]:checked, [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked+label, [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 1.75rem;
+    cursor: pointer;
+    line-height: 1.25rem;
+    display: inline-block;
+}
+
+[type="radio"]:checked+label:before, [type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    background: #fff;
+}
+
+[type="radio"]:checked+label:after, [type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: .75rem;
+    height: .75rem;
+    background: var(--main-color);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+@media only screen and (max-width: 1024px) {
+    h1, h2 {
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    button {
+        font-size: .6rem;
+    }
+    [type="radio"]:checked+label:before, [type="radio"]:not(:checked)+label:before {
+        width: .75rem;
+        height: .75rem;
+    }
+    [type="radio"]:checked+label:after, [type="radio"]:not(:checked)+label:after {
+        width: .5rem;
+        height: .5rem;
+        top: 3.5px;
+        left: 3.5px;
+    }
+    #icons img {
+        max-width: 5rem;
+        border-radius: .6rem;
+    }
+    p {
+        font-size: .6rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    main {
+        border-radius: 1rem;
+        margin: 1rem;
+        background: linear-gradient(145deg, #17427a, #1b4e92);
+    box-shadow: 5px 5px 15px #153e74, -5px -5px 15px #1d549c;
+    }
+
+    h1, h2 {
+        font-size: .6rem;
+    }
+
+    h1 {
+        line-height: 1rem;
+    }
+
+    h2 {
+        margin: 1rem 0 1rem 0;
+        line-height: 1rem
+    }
+
+    #roundsBox {
+        margin: 0 0 1rem 0;
+    }
+
+    #counterPoints {
+        padding: 1rem 1rem;
+    }
+    #counterPoints div h1:nth-of-type(1) {
+        margin: 0 0 0 0;
+    }
+    #icons img {
+        max-width: 3.5rem;
+        border-radius: .3rem;
+        margin: 0 1rem;
+    }
+    p {
+        font-size: .5rem;
+        line-height: .7rem;
+        padding: 0 .2rem;
+    }
+    button {
+        padding: 4%;
+        margin: 0 0 1rem 0;
+    }
+    #counterPoints {
+        border-radius: 1rem;
+    }
+
+    label {
+        font-size: .8rem;
+    }
+
+    [type="radio"]:checked+label:before, [type="radio"]:not(:checked)+label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: .75rem;
+        height: .75rem;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        background: #fff;
+    }
+    
+    [type="radio"]:checked+label:after, [type="radio"]:not(:checked)+label:after {
+        content: '';
+        width: .5rem;
+        height: .5rem;
+        background: var(--main-color);
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border-radius: 100%;
+        transition: all 0.2s ease;
+    }
+}

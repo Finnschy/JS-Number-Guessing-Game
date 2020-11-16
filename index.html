@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <main>
+        <h1>Number Guessing Game</h1>
+        <section>
+            <article id="roundsBox">
+                <h2>How many rounds do you want to play?</h2>
+                <form action="" id="roundChoice">
+                    <div>
+                        <input type="radio" name="rounds" id="five" value="5" checked>
+                        <label for="five">05</label>
+                        <input type="radio" name="rounds" id="ten" value="10">
+                        <label for="ten">10</label>
+                        <input type="radio" name="rounds" id="fifteen" value="15">
+                        <label for="fifteen">15</label>
+                        <input type="radio" name="rounds" id="twenty" value="20">
+                        <label for="twenty">Custom</label>
+                    </div>
+                    <div id="customRounds">
+                        <form action="">
+                            <input type="number" name="custom" id="custom" placeholder="20">
+                        </form>
+                    </div>
+                </form>
+
+            </article>
+
+            <article id="counterPoints">
+
+                <div>
+                    <h1>ROUNDS</h1>
+                    <h1 id="roundsCounter">1/10</h1>
+                </div>
+
+                <div>
+                    <form action="">
+                        <input type="number" placeholder="20">
+                        <button>Guess</button>
+                    </form>
+                </div>
+
+    
+                    <p id="result">Nope</p>
+                
+
+            </article>
+        </section>
+
+        
+
+        <section id="restartBox">
+            <button id="restart">restart</button>
+
+        </section>
+
+    </main>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
