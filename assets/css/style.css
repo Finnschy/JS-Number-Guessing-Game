@@ -48,8 +48,15 @@ h2 {
 #roundsBox {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 2rem 0;
 }
+
+#radioFlex {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
 
 form {
     display: flex;
@@ -68,6 +75,13 @@ form {
 
 input {
     margin: 1.5rem 0 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: .3rem 0;
+}
+
+input:focus {
+    outline: none;
 }
 
 #resultBox {
@@ -154,112 +168,4 @@ button:hover {
 [type="radio"]:checked+label:after {
     opacity: 1;
     transform: scale(1);
-}
-
-
-@media only screen and (max-width: 1024px) {
-    h1, h2 {
-        font-size: .9rem;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    button {
-        font-size: .6rem;
-    }
-    [type="radio"]:checked+label:before, [type="radio"]:not(:checked)+label:before {
-        width: .75rem;
-        height: .75rem;
-    }
-    [type="radio"]:checked+label:after, [type="radio"]:not(:checked)+label:after {
-        width: .5rem;
-        height: .5rem;
-        top: 3.5px;
-        left: 3.5px;
-    }
-    #icons img {
-        max-width: 5rem;
-        border-radius: .6rem;
-    }
-    p {
-        font-size: .6rem;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    main {
-        border-radius: 1rem;
-        margin: 1rem;
-        background: linear-gradient(145deg, #17427a, #1b4e92);
-    box-shadow: 5px 5px 15px #153e74, -5px -5px 15px #1d549c;
-    }
-
-    h1, h2 {
-        font-size: .6rem;
-    }
-
-    h1 {
-        line-height: 1rem;
-    }
-
-    h2 {
-        margin: 1rem 0 1rem 0;
-        line-height: 1rem
-    }
-
-    #roundsBox {
-        margin: 0 0 1rem 0;
-    }
-
-    #mainGame {
-        padding: 1rem 1rem;
-    }
-    #mainGame div h1:nth-of-type(1) {
-        margin: 0 0 0 0;
-    }
-    #icons img {
-        max-width: 3.5rem;
-        border-radius: .3rem;
-        margin: 0 1rem;
-    }
-    p {
-        font-size: .5rem;
-        line-height: .7rem;
-        padding: 0 .2rem;
-    }
-    button {
-        padding: 4%;
-        margin: 0 0 1rem 0;
-    }
-    #mainGame {
-        border-radius: 1rem;
-    }
-
-    label {
-        font-size: .8rem;
-    }
-
-    [type="radio"]:checked+label:before, [type="radio"]:not(:checked)+label:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: .75rem;
-        height: .75rem;
-        border: 1px solid #fff;
-        border-radius: 100%;
-        background: #fff;
-    }
-    
-    [type="radio"]:checked+label:after, [type="radio"]:not(:checked)+label:after {
-        content: '';
-        width: .5rem;
-        height: .5rem;
-        background: var(--main-color);
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        border-radius: 100%;
-        transition: all 0.2s ease;
-    }
 }
